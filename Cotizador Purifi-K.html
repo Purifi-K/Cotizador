@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Purifi-K">
+<meta name="theme-color" content="#0b4d8f">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>Cotizador Purifi-K</title>
+<style>
+:root{
+  --blue-dark:#0b3e73; --blue:#1f7bc9; --blue-light:#6fc3f7; --bg:#eef7fd;
+  --card:#ffffff; --text:#0f2438; --muted:#5b7387; --border:#d7e6f3;
+  --teal:#04b8a5; --warm:#ff8a3d; --ok:#1a8a4a; --danger:#c0392b;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  box-sizing:border-box;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0a1420; --card:#132133; --text:#e7f0f7; --muted:#93aabd; --border:#22384c;
+    --blue-dark:#7ec4f7; --blue:#4fa3e0; --blue-light:#3a6f96;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0a1420; --card:#132133; --text:#e7f0f7; --muted:#93aabd; --border:#22384c;
+  --blue-dark:#7ec4f7; --blue:#4fa3e0; --blue-light:#3a6f96;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;padding-bottom:90px;}
+h1,h2,.tab-btn{font-family:'Baloo 2',system-ui,sans-serif;}
+
+.hero{position:relative;background:linear-gradient(135deg,var(--blue-dark),var(--blue) 55%,var(--teal));padding:calc(28px + env(safe-area-inset-top,0px)) 16px 46px;text-align:center;color:#fff;overflow:hidden;}
+.hero h1{margin:0;font-size:1.9rem;letter-spacing:.5px;text-shadow:0 2px 10px rgba(0,0,0,.15);}
+.hero h1 span{color:#bdeaff;}
+.hero .tag{margin:6px 0 0;font-size:.95rem;opacity:.92;font-style:italic;}
+.hero .wave{position:absolute;left:0;right:0;bottom:-1px;line-height:0;}
+.hero .wave svg{width:100%;height:34px;display:block;}
+
+.delivery{max-width:820px;margin:-22px auto 14px;padding:0 16px;position:relative;z-index:2;}
+.delivery-inner{background:linear-gradient(135deg,#9b5de5,#f15bb5);border:1px solid transparent;border-radius:16px;padding:12px 16px;display:flex;gap:10px;align-items:center;box-shadow:0 6px 18px rgba(155,93,229,.3);}
+.delivery-inner .txt{color:#fff;}
+.delivery-inner .txt b{color:#fff5fb;}
+.delivery-inner .ico{font-size:1.5rem;}
+.delivery-inner .txt{font-size:.85rem;color:#fff;}
+.delivery-inner .txt b{color:#fff5fb;}
+
+.tabs{max-width:820px;margin:0 auto 10px;padding:0 12px;display:flex;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.tab-btn{flex:0 0 auto;display:flex;align-items:center;gap:6px;background:var(--card);border:2px solid var(--border);color:var(--muted);font-weight:700;font-size:.88rem;padding:10px 16px;border-radius:999px;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease,background .15s ease,color .15s ease;white-space:nowrap;}
+.tab-btn .ico{font-size:1.1rem;}
+.tab-btn:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(11,77,143,.15);}
+.tab-btn.active{background:linear-gradient(135deg,var(--blue),var(--teal));border-color:transparent;color:#fff;transform:scale(1.04);box-shadow:0 8px 18px rgba(4,184,165,.3);}
+
+main{max-width:820px;margin:0 auto;padding:6px 16px 20px;}
+.page{display:none;}
+.page.active{display:block;animation:fadeIn .35s ease;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+
+.pagehead{display:flex;align-items:center;gap:10px;margin:10px 0 14px;}
+.pagehead .emoji{font-size:2rem;}
+.pagehead h2{margin:0;color:var(--blue-dark);font-size:1.3rem;}
+.pagehead p{margin:2px 0 0;color:var(--muted);font-size:.82rem;}
+
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;margin-bottom:14px;box-shadow:0 4px 14px rgba(11,77,143,.06);}
+.card h3{color:var(--blue-dark);font-size:1rem;margin:0 0 10px;}
+.item{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:12px;border-radius:12px;margin-bottom:8px;background:linear-gradient(135deg,rgba(155,93,229,.1),rgba(241,91,181,.1));border:1px solid rgba(155,93,229,.25);}
+.item:last-child{margin-bottom:0;}
+.item:last-child{border-bottom:none;}
+.item .name{flex:1 1 180px;font-weight:700;}
+.item .name small{display:block;font-weight:400;color:var(--muted);font-size:.78rem;}
+.item input[type=number]{width:64px;padding:8px;border:2px solid var(--border);border-radius:10px;background:var(--bg);color:var(--text);font-weight:700;text-align:center;transition:border-color .15s;}
+.item .unit{font-size:.72rem;color:var(--muted);margin-left:-4px;font-weight:600;}
+.item input[type=number]:focus{border-color:var(--teal);outline:none;}
+.item .price{min-width:100px;text-align:right;}
+.item .price .amt{font-weight:800;background:linear-gradient(135deg,#9b5de5,#f15bb5);-webkit-background-clip:text;background-clip:text;color:transparent;display:block;}
+.item .price .disc{font-size:.72rem;color:var(--ok);display:block;font-weight:700;}
+
+.note{font-size:.78rem;color:var(--muted);margin-top:6px;line-height:1.5;}
+.howitworks{position:relative;font-family:'Baloo 2',system-ui,sans-serif;font-size:.85rem;line-height:1.55;color:var(--blue-dark);background:repeating-linear-gradient(135deg,rgba(31,123,201,.07),rgba(31,123,201,.07) 10px,rgba(4,184,165,.07) 10px,rgba(4,184,165,.07) 20px);border:2px dashed var(--teal);border-radius:14px;padding:14px 14px 14px 44px;margin:10px 0;}
+.howitworks::before{content:"💡";position:absolute;left:12px;top:12px;font-size:1.2rem;}
+.howitworks b{color:var(--teal);}
+.note.color{color:var(--warm);font-weight:700;background:rgba(255,138,61,.1);padding:10px 12px;border-radius:10px;}
+.warn{font-size:.8rem;color:var(--ok);margin-top:6px;font-weight:700;}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.field{display:flex;flex-direction:column;gap:4px;margin-bottom:10px;}
+.field label{font-size:.82rem;color:var(--muted);font-weight:600;}
+.field input,.field textarea,.field select{padding:10px;border:2px solid var(--border);border-radius:10px;background:var(--bg);color:var(--text);font-family:inherit;}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--teal);outline:none;}
+
+.totals{display:flex;justify-content:space-between;padding:6px 0;font-size:.95rem;}
+.cart-list{margin-bottom:6px;}
+.cart-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 0;border-bottom:1px dashed var(--border);font-size:.88rem;}
+.cart-row:last-child{border-bottom:1px solid var(--border);margin-bottom:6px;}
+.cart-row .cn{color:var(--text);}
+.cart-row .cn small{display:block;color:var(--muted);font-size:.75rem;}
+.cart-row .cp{font-weight:800;color:var(--blue-dark);white-space:nowrap;}
+.cart-empty{color:var(--muted);font-size:.85rem;font-style:italic;padding:6px 0 12px;}
+.cart-row .save{display:inline-block;margin-top:3px;background:linear-gradient(135deg,#ffd60a,var(--warm));color:#4a2600;font-weight:800;font-size:.72rem;padding:2px 8px;border-radius:999px;}
+.cart-savings{margin-top:4px;padding:10px 12px;border-radius:12px;background:linear-gradient(135deg,#ffd60a,var(--warm));color:#4a2600;font-weight:800;font-size:.9rem;text-align:center;}
+.totals.total{font-size:1.35rem;font-weight:800;color:var(--blue-dark);border-top:2px solid var(--blue-light);margin-top:6px;padding-top:10px;}
+
+button.cta{background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff;border:none;border-radius:14px;padding:14px;font-size:1.02rem;font-weight:800;width:100%;cursor:pointer;box-shadow:0 8px 18px rgba(4,184,165,.3);transition:transform .12s;}
+button.cta:active{transform:scale(.97);}
+textarea#summary{width:100%;min-height:240px;margin-top:12px;font-family:ui-monospace,Consolas,monospace;font-size:.8rem;white-space:pre-wrap;border-radius:10px;}
+
+.floatbar{position:fixed;left:0;right:0;bottom:0;padding-bottom:env(safe-area-inset-bottom,0px);background:linear-gradient(135deg,var(--blue-dark),var(--blue));color:#fff;display:flex;align-items:center;justify-content:space-between;padding:12px 18px calc(12px + env(safe-area-inset-bottom,0px));cursor:pointer;box-shadow:0 -4px 14px rgba(0,0,0,.15);z-index:10;}
+.floatbar span{font-size:.75rem;opacity:.85;}
+.floatbar strong{font-size:1.15rem;}
+.floatbar .arrow{font-weight:700;font-size:.85rem;background:rgba(255,255,255,.18);padding:6px 12px;border-radius:999px;}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>💧 INSUMOS <span>PURIFI·K</span></h1>
+  <p class="tag">LO MEJOR PARA TU PURIFICADORA</p>
+  <div class="wave"><svg viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0,20 C300,50 900,-10 1200,20 L1200,40 L0,40 Z" fill="var(--bg)"/></svg></div>
+</div>
+
+<div class="delivery">
+  <div class="delivery-inner">
+    <span class="ico">🚚</span>
+    <div class="txt"><b>Entregas gratis</b> únicamente dentro de la ciudad de Puebla, hasta un máximo de <b>30 minutos</b> de nuestras sucursales. Los precios no incluyen transporte fuera de esa zona.</div>
+  </div>
+</div>
+
+<nav class="tabs">
+  <button class="tab-btn active" data-tab="garrafones" onclick="showTab('garrafones')"><span class="ico">💧</span>Garrafones</button>
+  <button class="tab-btn" data-tab="tapas" onclick="showTab('tapas')"><span class="ico">🎨</span>Tapas y Sellos</button>
+  <button class="tab-btn" data-tab="orden" onclick="showTab('orden')"><span class="ico">🧾</span>Mi Orden</button>
+</nav>
+
+<main>
+
+<section id="page-garrafones" class="page active">
+  <div class="pagehead"><span class="emoji">💧</span><div><h2>Garrafones</h2><p>Precio por pieza, según paquetes de 4</p></div></div>
+  <div class="card">
+    <div class="howitworks"><b>¿Cómo funciona?</b> El nivel de precio se calcula sobre el <b>total combinado</b> de piezas (azul + cristal juntos), sin importar cómo se repartan los colores — por ejemplo, 100 azules + 100 cristal = 200 piezas y ambas aplican precio de 200+.</div>
+    <div class="warn" id="garrafon-combo-msg" style="display:none;"></div>
+    <div class="item">
+      <div class="name">Garrafón Azul<small>1-3: $100 · 4-11: $80 · 12-51: $78 · 52-151: $75 · 152-199: $72 · 200+: $69.80 (distribuidor)</small></div>
+      <input type="number" min="0" value="0" id="qty-azul" oninput="calc()"><span class="unit">piezas</span>
+      <div class="price"><span class="amt" id="price-azul">$0.00</span><span class="disc" id="disc-azul"></span></div>
+    </div>
+    <div class="item">
+      <div class="name">Garrafón Cristal<small>1-3: $100 · 4-11: $88 · 12-51: $80 · 52-151: $76.80 · 152-199: $73.80 · 200+: $71.60 (distribuidor)</small></div>
+      <input type="number" min="0" value="0" id="qty-cristal" oninput="calc()"><span class="unit">piezas</span>
+      <div class="price"><span class="amt" id="price-cristal">$0.00</span><span class="disc" id="disc-cristal"></span></div>
+    </div>
+  </div>
+</section>
+
+<section id="page-tapas" class="page">
+  <div class="pagehead"><span class="emoji">🎨</span><div><h2>Tapas, Sello y Liner</h2><p>Precio por millar · mayoreo automático desde 30 millares</p></div></div>
+  <div class="card">
+    <div class="howitworks"><b>¿Cómo funciona?</b> Unidad asumida "millar" para tapas y sello (la lista original solo la especifica para el Liner). En tapas, si sumas 30 millares o más combinando los distintos tipos (No.49, No.52, No.56, presión), todas pasan a precio de mayoreo aunque ninguna llegue sola a 30.</div>
+    <div class="note color" id="rainbow-note">🎨 Manejamos variedad de colores en tapas y sellos — pregunta por los colores disponibles en existencia al confirmar tu pedido.</div>
+    <div id="tapas-list" style="margin-top:8px;"></div>
+    <div class="warn" id="tapa-combo-msg" style="display:none;"></div>
+  </div>
+</section>
+
+<section id="page-orden" class="page">
+  <div class="pagehead"><span class="emoji">🧾</span><div><h2>Mi Orden</h2><p>Completa tus datos y genera la cotización</p></div></div>
+
+  <div class="card">
+    <h3>Datos de contacto</h3>
+    <div class="grid2">
+      <div class="field"><label>Cliente</label><input id="cliente" placeholder="Nombre"></div>
+      <div class="field"><label>Teléfono *</label><input id="telefono" placeholder="222 000 0000" required></div>
+    </div>
+    <div class="field"><label>Correo electrónico *</label><input id="correo" type="email" placeholder="correo@ejemplo.com" required></div>
+    <div class="field"><label>Código postal</label><input id="cp" type="text" inputmode="numeric" maxlength="5" placeholder="72000" pattern="[0-9]{5}"></div>
+    <div class="field"><label>Zona de entrega</label>
+      <select id="zona" onchange="calc()">
+        <option value="puebla">Dentro de Puebla, máx. 30 min de sucursales — entrega gratis</option>
+        <option value="hora">Dentro de Puebla, a más de 30 min de sucursales — aplica costo</option>
+        <option value="fuera">Fuera de la ciudad de Puebla — se cotiza según distancia</option>
+      </select>
+    </div>
+    <div class="field"><label>Notas</label><textarea id="notas" rows="2" placeholder="Comentarios adicionales, color preferido, etc."></textarea></div>
+    <details><summary style="cursor:pointer;color:var(--blue);font-weight:700;font-size:.85rem;">Aviso de Privacidad</summary>
+      <div class="note" style="margin-top:8px;">
+        <strong>Insumos Purifi-K</strong>, con domicilio operativo en Puebla, Pue. (contacto: 222 116 9576 / 222 929 3883), es responsable del tratamiento de los datos personales que nos proporciones (nombre, teléfono, correo electrónico, dirección de entrega y demás datos de la orden).<br><br>
+        <u>Finalidad:</u> generar cotizaciones, procesar y dar seguimiento a tus pedidos, coordinar la entrega y, en su caso, facturar. No se recaban datos sensibles.<br><br>
+        <u>Transferencias:</u> tus datos no se comparten con terceros salvo obligación legal.<br><br>
+        <u>Derechos ARCO:</u> puedes acceder, rectificar, cancelar u oponerte al uso de tus datos, o revocar tu consentimiento, escribiendo por WhatsApp a los números indicados arriba.<br><br>
+        <u>Cambios:</u> este aviso puede actualizarse; los cambios se publicarán en este mismo sitio. Última actualización: septiembre 2026.
+      </div>
+    </details>
+    <div class="field" style="flex-direction:row;align-items:center;gap:8px;margin-top:10px;">
+      <input type="checkbox" id="acepta-aviso" style="width:auto;">
+      <label for="acepta-aviso" style="font-size:.82rem;">He leído y acepto el Aviso de Privacidad *</label>
+    </div>
+    <div class="field" id="err-msg" style="display:none;color:var(--danger);font-weight:700;"></div>
+  </div>
+
+  <div class="card">
+    <h3>Resumen</h3>
+    <div id="cart-list" class="cart-list"></div>
+    <div class="totals"><span>Subtotal (sin IVA)</span><span id="subtotal">$0.00</span></div>
+    <div class="totals"><span>IVA (16%)</span><span id="iva">$0.00</span></div>
+    <div class="totals total"><span>Total con IVA</span><span id="total">$0.00</span></div>
+    <div class="note">Envío: gratis dentro de Puebla hasta 30 min de sucursales · más de 30 min dentro de Puebla aplica costo · fuera de Puebla se cotiza según distancia.</div>
+    <div style="margin-top:14px;"><button class="cta" onclick="genOrden()">Generar orden 🧾</button></div>
+    <textarea id="summary" readonly style="display:none;"></textarea>
+  </div>
+</section>
+
+</main>
+
+<p style="text-align:center;font-size:.72rem;color:var(--muted);max-width:820px;margin:0 auto 10px;padding:0 16px;">📱 En iPhone/iPad: abre en Safari, toca Compartir → Agregar a pantalla de inicio, para usarlo como app.</p>
+
+<div class="floatbar" onclick="showTab('orden')">
+  <div><span>Total con IVA</span><br><strong id="float-total">$0.00</strong></div>
+  <span class="arrow">Ver mi orden →</span>
+</div>
+
+<script>
+function showTab(name){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+name).classList.add('active');
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.toggle('active', b.dataset.tab===name));
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+const garrafonTierBounds=[[1,3],[4,11],[12,51],[52,151],[152,199],[200,Infinity]];
+const azulPrices=[100,80,78,75,72,69.80];
+const cristalPrices=[100,88,80,76.80,73.80,71.60];
+
+const tapaFamily=[
+ {id:'tapa49',name:'Tapa No. 49',normal:255,mayoreo:230},
+ {id:'tapa52',name:'Tapa No. 52 (rosca)',normal:257,mayoreo:227.80},
+ {id:'tapa56',name:'Tapa No. 56 (rosca)',normal:257,mayoreo:227.80},
+ {id:'tapapresion',name:'Tapa presión',normal:275,mayoreo:255},
+];
+const otros=[
+ {id:'sello',name:'Sello termoencogible',normal:157,mayoreo:137.80},
+ {id:'liner',name:'Liner',normal:75,mayoreo:68.70},
+];
+const allSmall=[...tapaFamily,...otros];
+const MAYOREO_MIN=30;
+
+const list=document.getElementById('tapas-list');
+allSmall.forEach(t=>{
+  const div=document.createElement('div');
+  div.className='item';
+  div.innerHTML=`<div class="name">${t.name}<small>Normal $${t.normal.toFixed(2)} · Mayoreo $${t.mayoreo.toFixed(2)} (30+ millares)</small></div>
+    <input type="number" min="0" value="0" id="qty-${t.id}" oninput="calc()"><span class="unit">millares</span>
+    <div class="price"><span class="amt" id="price-${t.id}">$0.00</span><span class="disc" id="disc-${t.id}"></span></div>`;
+  list.appendChild(div);
+});
+
+function garrafonTierIndex(qty){
+  for(let i=0;i<garrafonTierBounds.length;i++){ const [min,max]=garrafonTierBounds[i]; if(qty>=min && qty<=max) return i; }
+  return -1;
+}
+
+let lastLines=[];
+let cartItems=[];
+
+function renderCart(){
+  const box=document.getElementById('cart-list');
+  if(cartItems.length===0){
+    box.innerHTML='<div class="cart-empty">Aún no has agregado productos. Ve a "Garrafones" o "Tapas y Sellos" para empezar.</div>';
+    return;
+  }
+  box.innerHTML=cartItems.map(it=>{
+    const save=it.savings||0;
+    const saveTag= save>0.004 ? `<span class="save">🎉 Ahorras $${save.toFixed(2)}</span>` : '';
+    return `<div class="cart-row"><span class="cn">${it.name}<small>${it.qty} ${it.unit} × $${it.unitPrice.toFixed(2)}${it.tag?' · '+it.tag:''}</small>${saveTag}</span><span class="cp">$${it.total.toFixed(2)}</span></div>`;
+  }).join('');
+  const totalSavings=cartItems.reduce((a,it)=>a+(it.savings||0),0);
+  if(totalSavings>0.004){
+    box.innerHTML+=`<div class="cart-savings">🎉 ¡Ahorro total en esta orden: $${totalSavings.toFixed(2)}!</div>`;
+  }
+}
+
+function calc(){
+  let subtotal=0;
+  lastLines=[];
+  cartItems=[];
+
+  const qAzul=+document.getElementById('qty-azul').value||0;
+  const qCristal=+document.getElementById('qty-cristal').value||0;
+  const qCombinado=qAzul+qCristal;
+  const idx=qCombinado>0?garrafonTierIndex(qCombinado):-1;
+  const pAzul=idx>=0?azulPrices[idx]:0;
+  const pCristal=idx>=0?cristalPrices[idx]:0;
+
+  const comboMsg=document.getElementById('garrafon-combo-msg');
+  if(qAzul>0 && qCristal>0){
+    comboMsg.style.display='block';
+    comboMsg.textContent=`Precio por volumen combinado: ${qCombinado} piezas entre azul y cristal.`;
+  } else { comboMsg.style.display='none'; }
+
+  const tAzul=qAzul*pAzul;
+  document.getElementById('price-azul').textContent='$'+tAzul.toFixed(2);
+  const discAzul=qAzul>0?Math.round((1-pAzul/100)*1000)/10:0;
+  document.getElementById('disc-azul').textContent=(qAzul>0&&discAzul>0)?`-${discAzul}% vs 1 pza`:'';
+  if(qAzul>0){subtotal+=tAzul; lastLines.push(`Garrafón Azul x${qAzul} @ $${pAzul.toFixed(2)} = $${tAzul.toFixed(2)}${qCombinado>=200?' (precio distribuidor)':''}`); cartItems.push({name:'Garrafón Azul',qty:qAzul,unit:'pza',unitPrice:pAzul,total:tAzul,tag:qCombinado>=200?'precio distribuidor':'',savings:qAzul*(100-pAzul)});}
+
+  const tCristal=qCristal*pCristal;
+  document.getElementById('price-cristal').textContent='$'+tCristal.toFixed(2);
+  const discCristal=qCristal>0?Math.round((1-pCristal/100)*1000)/10:0;
+  document.getElementById('disc-cristal').textContent=(qCristal>0&&discCristal>0)?`-${discCristal}% vs 1 pza`:'';
+  if(qCristal>0){subtotal+=tCristal; lastLines.push(`Garrafón Cristal x${qCristal} @ $${pCristal.toFixed(2)} = $${tCristal.toFixed(2)}${qCombinado>=200?' (precio distribuidor)':''}`); cartItems.push({name:'Garrafón Cristal',qty:qCristal,unit:'pza',unitPrice:pCristal,total:tCristal,tag:qCombinado>=200?'precio distribuidor':'',savings:qCristal*(100-pCristal)});}
+
+  let tapaFamilyTotal=0;
+  tapaFamily.forEach(t=> tapaFamilyTotal+=+document.getElementById('qty-'+t.id).value||0);
+  const comboMayoreo = tapaFamilyTotal>=MAYOREO_MIN;
+  const msg=document.getElementById('tapa-combo-msg');
+  if(comboMayoreo){ msg.style.display='block'; msg.textContent=`Mayoreo aplicado a todas las tapas: suman ${tapaFamilyTotal} millares (≥30).`; }
+  else { msg.style.display='none'; }
+
+  tapaFamily.forEach(t=>{
+    const q=+document.getElementById('qty-'+t.id).value||0;
+    const may = comboMayoreo || q>=MAYOREO_MIN;
+    const price=may?t.mayoreo:t.normal;
+    const total=q*price;
+    document.getElementById('price-'+t.id).textContent='$'+total.toFixed(2);
+    const disc=Math.round((1-t.mayoreo/t.normal)*1000)/10;
+    document.getElementById('disc-'+t.id).textContent=(q>0&&may)?`Mayoreo (-${disc}%)`:'';
+    if(q>0){subtotal+=total; lastLines.push(`${t.name} x${q} millar @ $${price.toFixed(2)}${may?' (mayoreo)':''} = $${total.toFixed(2)}`); cartItems.push({name:t.name,qty:q,unit:'millar',unitPrice:price,total:total,tag:may?'mayoreo':'',savings:may?q*(t.normal-price):0});}
+  });
+
+  otros.forEach(t=>{
+    const q=+document.getElementById('qty-'+t.id).value||0;
+    const may = q>=MAYOREO_MIN;
+    const price=may?t.mayoreo:t.normal;
+    const total=q*price;
+    document.getElementById('price-'+t.id).textContent='$'+total.toFixed(2);
+    const disc=Math.round((1-t.mayoreo/t.normal)*1000)/10;
+    document.getElementById('disc-'+t.id).textContent=(q>0&&may)?`Mayoreo (-${disc}%)`:'';
+    if(q>0){subtotal+=total; lastLines.push(`${t.name} x${q} millar @ $${price.toFixed(2)}${may?' (mayoreo)':''} = $${total.toFixed(2)}`); cartItems.push({name:t.name,qty:q,unit:'millar',unitPrice:price,total:total,tag:may?'mayoreo':'',savings:may?q*(t.normal-price):0});}
+  });
+
+  renderCart();
+
+  const iva=subtotal*0.16;
+  const total=subtotal+iva;
+  document.getElementById('subtotal').textContent='$'+subtotal.toFixed(2);
+  document.getElementById('iva').textContent='$'+iva.toFixed(2);
+  document.getElementById('total').textContent='$'+total.toFixed(2);
+  document.getElementById('float-total').textContent='$'+total.toFixed(2);
+}
+
+function genOrden(){
+  calc();
+  const tel=document.getElementById('telefono').value.trim();
+  const correo=document.getElementById('correo').value.trim();
+  const acepta=document.getElementById('acepta-aviso').checked;
+  const errBox=document.getElementById('err-msg');
+  const errs=[];
+  if(!tel) errs.push('el teléfono');
+  if(!correo || !correo.includes('@')) errs.push('un correo electrónico válido');
+  if(!acepta) errs.push('la aceptación del Aviso de Privacidad');
+  if(errs.length){
+    errBox.style.display='block';
+    errBox.textContent='Falta: '+errs.join(', ')+'.';
+    errBox.scrollIntoView({behavior:'smooth',block:'center'});
+    return;
+  }
+  errBox.style.display='none';
+
+  const cliente=document.getElementById('cliente').value||'(sin especificar)';
+  const zonaSel=document.getElementById('zona');
+  const zonaText=zonaSel.options[zonaSel.selectedIndex].text;
+  const cp=document.getElementById('cp').value.trim()||'(sin especificar)';
+  const notas=document.getElementById('notas').value||'—';
+  const subtotal=document.getElementById('subtotal').textContent;
+  const iva=document.getElementById('iva').textContent;
+  const total=document.getElementById('total').textContent;
+  const fecha=new Date().toLocaleDateString('es-MX');
+
+  let txt=`ORDEN — INSUMOS PURIFI-K\nFecha: ${fecha}\nCliente: ${cliente}\nTeléfono: ${tel}\nCorreo: ${correo}\nCódigo postal: ${cp}\nZona de entrega: ${zonaText}\n\nPRODUCTOS:\n`;
+  if(lastLines.length===0){ txt+='(sin productos seleccionados)\n'; } else { lastLines.forEach(l=>txt+='- '+l+'\n'); }
+  txt+=`\nSubtotal: ${subtotal}\nIVA (16%): ${iva}\nTOTAL: ${total}\n\nNotas: ${notas}\n\nWhatsApp: 222 116 9576 / 222 929 3883`;
+
+  const s=document.getElementById('summary');
+  s.style.display='block';
+  s.value=txt;
+  s.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+calc();
+
+document.querySelectorAll('input[id^="qty-"]').forEach(inp=>{
+  inp.addEventListener('focus', ()=>{ if(inp.value==='0') inp.value=''; });
+  inp.addEventListener('blur', ()=>{ if(inp.value.trim()==='') { inp.value='0'; calc(); } });
+});
+
+const rainbowNote=document.getElementById('rainbow-note');
+if(rainbowNote){
+  const rainbow=['#e63946','#f3722c','#f9c74f','#90be6d','#43aa8b','#277da1','#577590','#9b5de5','#f15bb5'];
+  const text=rainbowNote.textContent;
+  rainbowNote.setAttribute('aria-label', text);
+  rainbowNote.innerHTML=[...text].map((ch,i)=> ch===' ' ? ' ' : `<span style="color:${rainbow[i%rainbow.length]};font-weight:800;">${ch}</span>`).join('');
+}
+</script>
+</body>
+</html>
