@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Purifi-K">
+<meta name="theme-color" content="#0b4d8f">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>Cotizador Purifi-K</title>
+<style>
+:root{
+  --blue-dark:#0b3e73; --blue:#1f7bc9; --blue-light:#6fc3f7; --bg:#eef7fd;
+  --card:#ffffff; --text:#0f2438; --muted:#5b7387; --border:#d7e6f3;
+  --teal:#04b8a5; --warm:#ff8a3d; --ok:#1a8a4a; --danger:#c0392b;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  box-sizing:border-box;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0a1420; --card:#132133; --text:#e7f0f7; --muted:#93aabd; --border:#22384c;
+    --blue-dark:#7ec4f7; --blue:#4fa3e0; --blue-light:#3a6f96;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0a1420; --card:#132133; --text:#e7f0f7; --muted:#93aabd; --border:#22384c;
+  --blue-dark:#7ec4f7; --blue:#4fa3e0; --blue-light:#3a6f96;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);}
+*{box-sizing:border-box;}
+input,select,textarea{font-size:16px;}
+html,body{max-width:100%;overflow-x:hidden;-webkit-text-size-adjust:100%;}
+.grid2>*,.field{min-width:0;}
+.field input,.field textarea,.field select{width:100%;min-width:0;max-width:100%;}
+.field select{text-overflow:ellipsis;}
+.card,.delivery-inner,.item{max-width:100%;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;padding-bottom:90px;}
+h1,h2,.tab-btn{font-family:'Baloo 2',system-ui,sans-serif;}
+
+.hero{position:relative;background:linear-gradient(135deg,var(--blue-dark),var(--blue) 55%,var(--teal));padding:calc(28px + env(safe-area-inset-top,0px)) 16px 46px;text-align:center;color:#fff;overflow:hidden;}
+.hero h1{margin:0;font-size:1.9rem;letter-spacing:.5px;text-shadow:0 2px 10px rgba(0,0,0,.15);}
+.hero h1 span{color:#bdeaff;}
+.hero .tag{margin:6px 0 0;font-size:.95rem;opacity:.92;font-style:italic;}
+.hero .wave{position:absolute;left:0;right:0;bottom:-1px;line-height:0;}
+.hero .wave svg{width:100%;height:34px;display:block;}
+
+.delivery{max-width:820px;margin:-22px auto 14px;padding:0 16px;position:relative;z-index:2;}
+.delivery-inner{background:linear-gradient(135deg,#9b5de5,#f15bb5);border:1px solid transparent;border-radius:16px;padding:12px 16px;display:flex;gap:10px;align-items:center;box-shadow:0 6px 18px rgba(155,93,229,.3);}
+.delivery-inner .txt{color:#fff;}
+.delivery-inner .txt b{color:#fff5fb;}
+.delivery-inner .ico{font-size:1.5rem;}
+.delivery-inner .txt{font-size:.85rem;color:#fff;}
+.delivery-inner .txt b{color:#fff5fb;}
+
+.tabs{max-width:820px;margin:0 auto 10px;padding:0 12px;display:flex;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.tab-btn{flex:0 0 auto;display:flex;align-items:center;gap:6px;background:var(--card);border:2px solid var(--border);color:var(--muted);font-weight:700;font-size:.88rem;padding:10px 16px;border-radius:999px;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease,background .15s ease,color .15s ease;white-space:nowrap;}
+.tab-btn .ico{font-size:1.1rem;}
+.tab-btn:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(11,77,143,.15);}
+.tab-btn.active{background:linear-gradient(135deg,var(--blue),var(--teal));border-color:transparent;color:#fff;transform:scale(1.04);box-shadow:0 8px 18px rgba(4,184,165,.3);}
+
+main{max-width:820px;margin:0 auto;padding:6px 16px 20px;}
+.page{display:none;}
+.page.active{display:block;animation:fadeIn .35s ease;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+
+.pagehead{display:flex;align-items:center;gap:10px;margin:10px 0 14px;}
+.pagehead .emoji{font-size:2rem;}
+.pagehead h2{margin:0;color:var(--blue-dark);font-size:1.3rem;}
+.pagehead p{margin:2px 0 0;color:var(--muted);font-size:.82rem;}
+
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;margin-bottom:14px;box-shadow:0 4px 14px rgba(11,77,143,.06);}
+.card h3{color:var(--blue-dark);font-size:1rem;margin:0 0 10px;}
+.item{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:12px;border-radius:12px;margin-bottom:8px;background:linear-gradient(135deg,rgba(155,93,229,.1),rgba(241,91,181,.1));border:1px solid rgba(155,93,229,.25);}
+.item:last-child{margin-bottom:0;}
+.item:last-child{border-bottom:none;}
+.item .name{flex:1 1 180px;font-weight:700;}
+.item .name small{display:block;font-weight:400;color:var(--muted);font-size:.78rem;}
+.item input[type=number]{width:64px;padding:8px;border:2px solid var(--border);border-radius:10px;background:var(--bg);color:var(--text);font-weight:700;text-align:center;transition:border-color .15s;}
+.item .unit{font-size:.72rem;color:var(--muted);margin-left:-4px;font-weight:600;}
+.mayoreo-hl{color:var(--warm);font-weight:800;}
+.item input[type=number]:focus{border-color:var(--teal);outline:none;}
+.item .price{min-width:100px;text-align:right;}
+.item .price .amt{font-weight:800;background:linear-gradient(135deg,#9b5de5,#f15bb5);-webkit-background-clip:text;background-clip:text;color:transparent;display:block;}
+.item .price .disc{font-size:.72rem;color:var(--ok);display:block;font-weight:700;}
+
+.note{font-size:.78rem;color:var(--muted);margin-top:6px;line-height:1.5;}
+.howitworks{position:relative;font-family:'Baloo 2',system-ui,sans-serif;font-size:.85rem;line-height:1.55;color:var(--blue-dark);background:repeating-linear-gradient(135deg,rgba(31,123,201,.07),rgba(31,123,201,.07) 10px,rgba(4,184,165,.07) 10px,rgba(4,184,165,.07) 20px);border:2px dashed var(--teal);border-radius:14px;padding:14px 14px 14px 44px;margin:10px 0;}
+.howitworks::before{content:"💡";position:absolute;left:12px;top:12px;font-size:1.2rem;}
+.howitworks b{color:var(--teal);}
+.note.color{color:var(--warm);font-weight:700;background:rgba(255,138,61,.1);padding:10px 12px;border-radius:10px;}
+.warn{font-size:.8rem;color:var(--ok);margin-top:6px;font-weight:700;}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.field{display:flex;flex-direction:column;gap:4px;margin-bottom:10px;}
+.field label{font-size:.82rem;color:var(--muted);font-weight:600;}
+.field input,.field textarea,.field select{padding:10px;border:2px solid var(--border);border-radius:10px;background:var(--bg);color:var(--text);font-family:inherit;}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--teal);outline:none;}
+
+.totals{display:flex;justify-content:space-between;padding:6px 0;font-size:.95rem;}
+.cart-list{margin-bottom:6px;}
+.cart-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 0;border-bottom:1px dashed var(--border);font-size:.88rem;}
+.cart-row:last-child{border-bottom:1px solid var(--border);margin-bottom:6px;}
+.cart-row .cn{color:var(--text);}
+.cart-row .cn small{display:block;color:var(--muted);font-size:.75rem;}
+.cart-row .cp{font-weight:800;color:var(--blue-dark);white-space:nowrap;}
+.cart-empty{color:var(--muted);font-size:.85rem;font-style:italic;padding:6px 0 12px;}
+.cart-row .save{display:inline-block;margin-top:3px;background:linear-gradient(135deg,#ffd60a,var(--warm));color:#4a2600;font-weight:800;font-size:.72rem;padding:2px 8px;border-radius:999px;}
+.cart-savings{margin-top:4px;padding:10px 12px;border-radius:12px;background:linear-gradient(135deg,#ffd60a,var(--warm));color:#4a2600;font-weight:800;font-size:.9rem;text-align:center;}
+.totals.total{font-size:1.35rem;font-weight:800;color:var(--blue-dark);border-top:2px solid var(--blue-light);margin-top:6px;padding-top:10px;}
+
+button.cta{background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff;border:none;border-radius:14px;padding:14px;font-size:1.02rem;font-weight:800;width:100%;cursor:pointer;box-shadow:0 8px 18px rgba(4,184,165,.3);transition:transform .12s;}
+button.cta:active{transform:scale(.97);}
+textarea#summary{width:100%;min-height:240px;margin-top:12px;font-family:ui-monospace,Consolas,monospace;font-size:.8rem;white-space:pre-wrap;border-radius:10px;}
+
+.floatbar{position:fixed;left:0;right:0;bottom:0;padding-bottom:env(safe-area-inset-bottom,0px);background:linear-gradient(135deg,var(--blue-dark),var(--blue));color:#fff;display:flex;align-items:center;justify-content:space-between;padding:12px 18px calc(12px + env(safe-area-inset-bottom,0px));cursor:pointer;box-shadow:0 -4px 14px rgba(0,0,0,.15);z-index:10;}
+.floatbar span{font-size:.75rem;opacity:.85;}
+.floatbar strong{font-size:1.15rem;}
+.floatbar .arrow{font-weight:700;font-size:.85rem;background:rgba(255,255,255,.18);padding:6px 12px;border-radius:999px;}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>💧 INSUMOS <span>PURIFI·K</span></h1>
+  <p class="tag">LO MEJOR PARA TU PURIFICADORA</p>
+  <div class="wave"><svg viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0,20 C300,50 900,-10 1200,20 L1200,40 L0,40 Z" fill="var(--bg)"/></svg></div>
+</div>
+
+<div class="delivery">
+  <div class="delivery-inner">
+    <span class="ico">🚚</span>
+    <div class="txt"><b>Entregas gratis</b> únicamente dentro de la ciudad de Puebla, hasta un máximo de <b>30 minutos</b> de nuestras sucursales. Los precios no incluyen transporte fuera de esa zona.</div>
+  </div>
+</div>
+
+<nav class="tabs">
+  <button class="tab-btn active" data-tab="garrafones" onclick="showTab('garrafones')"><span class="ico">💧</span>Garrafones</button>
+  <button class="tab-btn" data-tab="tapas" onclick="showTab('tapas')"><span class="ico">🎨</span>Tapas y Sellos</button>
+  <button class="tab-btn" data-tab="liners" onclick="showTab('liners')"><span class="ico">⭕</span>Liners</button>
+  <button class="tab-btn" data-tab="orden" onclick="showTab('orden')"><span class="ico">🧾</span>Mi Orden</button>
+</nav>
+
+<main>
+
+<section id="page-garrafones" class="page active">
+  <div class="pagehead"><span class="emoji">💧</span><div><h2>Garrafones</h2><p>Precio por pieza, según paquetes de 4</p></div></div>
+  <div class="card">
+    <div class="howitworks"><b>¿Cómo funciona?</b> El nivel de precio se calcula sobre el <b>total combinado</b> de piezas (azul + cristal juntos), sin importar cómo se repartan los colores — por ejemplo, 100 azules + 100 cristal = 200 piezas y ambas aplican precio de 200+.</div>
+    <div class="warn" id="garrafon-combo-msg" style="display:none;"></div>
+    <div class="item">
+      <div class="name">Garrafón Azul<small>1-3: $100 · 4-11: $80 · 12-51: $78 · 52-151: $75 · 152-199: $72 · <span class="mayoreo-hl">200+: $69.80 (DISTRIBUIDOR)</span></small></div>
+      <input type="number" min="0" value="0" id="qty-azul" oninput="calc()"><span class="unit" data-u="pza">Pzas</span>
+      <div class="price"><span class="amt" id="price-azul">$0.00</span><span class="disc" id="disc-azul"></span></div>
+    </div>
+    <div class="item">
+      <div class="name">Garrafón Cristal<small>1-3: $100 · 4-11: $88 · 12-51: $80 · 52-151: $76.80 · 152-199: $73.80 · <span class="mayoreo-hl">200+: $71.60 (DISTRIBUIDOR)</span></small></div>
+      <input type="number" min="0" value="0" id="qty-cristal" oninput="calc()"><span class="unit" data-u="pza">Pzas</span>
+      <div class="price"><span class="amt" id="price-cristal">$0.00</span><span class="disc" id="disc-cristal"></span></div>
+    </div>
+  </div>
+</section>
+
+<section id="page-tapas" class="page">
+  <div class="pagehead"><span class="emoji">🎨</span><div><h2>Tapas y Sello</h2><p>Precio por millar · mayoreo automático desde 30 millares</p></div></div>
+  <div class="card">
+    <div class="howitworks"><b>¿Cómo funciona?</b> Unidad asumida "millar" para tapas y sello (la lista original solo la especifica para el Liner). En tapas, si sumas 30 millares o más combinando los distintos tipos (No.49, No.52, No.56, presión), todas pasan a precio de mayoreo aunque ninguna llegue sola a 30.</div>
+    <div class="note color" id="rainbow-note">🎨 Manejamos variedad de colores en tapas y sellos — pregunta por los colores disponibles en existencia al confirmar tu pedido.</div>
+    <div id="tapas-list" style="margin-top:8px;"></div>
+    <div class="warn" id="tapa-combo-msg" style="display:none;"></div>
+  </div>
+</section>
+
+<section id="page-liners" class="page">
+  <div class="pagehead"><span class="emoji">⭕</span><div><h2>Liners</h2><p>Precio por millar · mayoreo automático desde 30 millares</p></div></div>
+  <div class="card">
+    <div class="howitworks"><b>¿Cómo funciona?</b> Elige el tamaño de liner que necesitas (49, 52 o 56 mm, los mismos tamaños de las tapas). Si sumas 30 millares o más combinando los distintos tamaños, todos pasan a precio de mayoreo aunque ninguno llegue solo a 30.</div>
+    <div id="liners-list" style="margin-top:8px;"></div>
+    <div class="warn" id="liner-combo-msg" style="display:none;"></div>
+  </div>
+</section>
+
+<section id="page-orden" class="page">
+  <div class="pagehead"><span class="emoji">🧾</span><div><h2>Mi Orden</h2><p>Completa tus datos y genera la cotización</p></div></div>
+
+  <div class="card">
+    <h3>Datos de contacto</h3>
+    <div class="grid2">
+      <div class="field"><label>Cliente</label><input id="cliente" placeholder="Nombre"></div>
+      <div class="field"><label>Teléfono *</label><input id="telefono" placeholder="222 000 0000" required></div>
+    </div>
+    <div class="field"><label>Correo electrónico *</label><input id="correo" type="email" placeholder="correo@ejemplo.com" required></div>
+    <div class="field"><label>Código postal</label><input id="cp" type="text" inputmode="numeric" maxlength="5" placeholder="72000" pattern="[0-9]{5}"></div>
+    <div class="field"><label>Zona de entrega</label>
+      <select id="zona" onchange="calc()">
+        <option value="puebla">Dentro de Puebla, máx. 30 min de sucursales — entrega gratis</option>
+        <option value="hora">Dentro de Puebla, a más de 30 min de sucursales — aplica costo</option>
+        <option value="fuera">Fuera de la ciudad de Puebla — se cotiza según distancia</option>
+      </select>
+    </div>
+    <div class="field"><label>Notas</label><textarea id="notas" rows="2" placeholder="Comentarios adicionales, color preferido, etc."></textarea></div>
+    <details><summary style="cursor:pointer;color:var(--blue);font-weight:700;font-size:.85rem;">Aviso de Privacidad</summary>
+      <div class="note" style="margin-top:8px;">
+        <strong>Insumos Purifi-K</strong>, con domicilio operativo en Puebla, Pue. (contacto: 222 116 9576 / 222 929 3883), es responsable del tratamiento de los datos personales que nos proporciones (nombre, teléfono, correo electrónico, dirección de entrega y demás datos de la orden).<br><br>
+        <u>Finalidad:</u> generar cotizaciones, procesar y dar seguimiento a tus pedidos, coordinar la entrega y, en su caso, facturar. No se recaban datos sensibles.<br><br>
+        <u>Transferencias:</u> tus datos no se comparten con terceros salvo obligación legal.<br><br>
+        <u>Derechos ARCO:</u> puedes acceder, rectificar, cancelar u oponerte al uso de tus datos, o revocar tu consentimiento, escribiendo por WhatsApp a los números indicados arriba.<br><br>
+        <u>Cambios:</u> este aviso puede actualizarse; los cambios se publicarán en este mismo sitio. Última actualización: septiembre 2026.
+      </div>
+    </details>
+    <div class="field" style="flex-direction:row;align-items:center;gap:8px;margin-top:10px;">
+      <input type="checkbox" id="acepta-aviso" style="width:auto;">
+      <label for="acepta-aviso" style="font-size:.82rem;">He leído y acepto el Aviso de Privacidad *</label>
+    </div>
+    <div class="field" id="err-msg" style="display:none;color:var(--danger);font-weight:700;"></div>
+  </div>
+
+  <div class="card">
+    <h3>Resumen</h3>
+    <div id="cart-list" class="cart-list"></div>
+    <div class="totals"><span>Subtotal (sin IVA)</span><span id="subtotal">$0.00</span></div>
+    <div class="totals"><span>IVA (16%)</span><span id="iva">$0.00</span></div>
+    <div class="totals total"><span>Total con IVA</span><span id="total">$0.00</span></div>
+    <div class="note">Envío: gratis dentro de Puebla hasta 30 min de sucursales · más de 30 min dentro de Puebla aplica costo · fuera de Puebla se cotiza según distancia.</div>
+    <div style="margin-top:14px;"><button class="cta" onclick="genOrden()">Generar orden 🧾</button></div>
+    <button id="copy-excel-btn" onclick="copyExcelRow()" style="display:none;margin-top:10px;background:var(--card);color:var(--blue-dark);border:2px solid var(--blue);border-radius:14px;padding:12px;font-size:.9rem;font-weight:700;width:100%;cursor:pointer;">📋 Copiar fila para Excel</button>
+    <textarea id="summary" readonly style="display:none;"></textarea>
+  </div>
+</section>
+
+</main>
+
+<p style="text-align:center;font-size:.72rem;color:var(--muted);max-width:820px;margin:0 auto 10px;padding:0 16px;">📱 En iPhone/iPad: abre en Safari, toca Compartir → Agregar a pantalla de inicio, para usarlo como app.</p>
+
+<div class="floatbar" onclick="showTab('orden')">
+  <div><span>Total con IVA</span><br><strong id="float-total">$0.00</strong></div>
+  <span class="arrow">Ver mi orden →</span>
+</div>
+
+<script>
+function showTab(name){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+name).classList.add('active');
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.toggle('active', b.dataset.tab===name));
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+const garrafonTierBounds=[[1,3],[4,11],[12,51],[52,151],[152,199],[200,Infinity]];
+const azulPrices=[100,80,78,75,72,69.80];
+const cristalPrices=[100,88,80,76.80,73.80,71.60];
+
+const tapaFamily=[
+ {id:'tapa49',name:'Tapa No. 49',normal:255,mayoreo:230},
+ {id:'tapa52',name:'Tapa No. 52 (rosca)',normal:257,mayoreo:227.80},
+ {id:'tapa56',name:'Tapa No. 56 (rosca)',normal:257,mayoreo:227.80},
+ {id:'tapapresion',name:'Tapa presión',normal:275,mayoreo:255},
+];
+const otros=[
+ {id:'sello',name:'Sello termoencogible',normal:157,mayoreo:137.80},
+];
+const linerFamily=[
+ {id:'liner49',name:'Liner 49 mm',normal:75,mayoreo:68.70},
+ {id:'liner52',name:'Liner 52 mm',normal:75,mayoreo:68.70},
+ {id:'liner56',name:'Liner 56 mm',normal:75,mayoreo:68.70},
+];
+const allSmall=[...tapaFamily,...otros];
+const MAYOREO_MIN=30;
+
+const list=document.getElementById('tapas-list');
+allSmall.forEach(t=>{
+  const div=document.createElement('div');
+  div.className='item';
+  div.innerHTML=`<div class="name">${t.name}<small>Normal $${t.normal.toFixed(2)} · <span class="mayoreo-hl">Mayoreo $${t.mayoreo.toFixed(2)} (30+ Millares)</span></small></div>
+    <input type="number" min="0" value="0" id="qty-${t.id}" oninput="calc()"><span class="unit" data-u="millar">Millares</span>
+    <div class="price"><span class="amt" id="price-${t.id}">$0.00</span><span class="disc" id="disc-${t.id}"></span></div>`;
+  list.appendChild(div);
+});
+
+const linerList=document.getElementById('liners-list');
+linerFamily.forEach(t=>{
+  const div=document.createElement('div');
+  div.className='item';
+  div.innerHTML=`<div class="name">${t.name}<small>Normal $${t.normal.toFixed(2)} · <span class="mayoreo-hl">Mayoreo $${t.mayoreo.toFixed(2)} (30+ Millares)</span></small></div>
+    <input type="number" min="0" value="0" id="qty-${t.id}" oninput="calc()"><span class="unit" data-u="millar">Millares</span>
+    <div class="price"><span class="amt" id="price-${t.id}">$0.00</span><span class="disc" id="disc-${t.id}"></span></div>`;
+  linerList.appendChild(div);
+});
+
+function garrafonTierIndex(qty){
+  for(let i=0;i<garrafonTierBounds.length;i++){ const [min,max]=garrafonTierBounds[i]; if(qty>=min && qty<=max) return i; }
+  return -1;
+}
+
+let lastLines=[];
+let cartItems=[];
+
+function renderCart(){
+  const box=document.getElementById('cart-list');
+  if(cartItems.length===0){
+    box.innerHTML='<div class="cart-empty">Aún no has agregado productos. Ve a "Garrafones", "Tapas y Sellos" o "Liners" para empezar.</div>';
+    return;
+  }
+  box.innerHTML=cartItems.map(it=>{
+    const save=it.savings||0;
+    const saveTag= save>0.004 ? `<span class="save">🎉 Ahorras $${save.toFixed(2)}</span>` : '';
+    return `<div class="cart-row"><span class="cn">${it.name}<small>${it.qty} ${it.unit} × $${it.unitPrice.toFixed(2)}${it.tag?' · '+it.tag:''}</small>${saveTag}</span><span class="cp">$${it.total.toFixed(2)}</span></div>`;
+  }).join('');
+  const totalSavings=cartItems.reduce((a,it)=>a+(it.savings||0),0);
+  if(totalSavings>0.004){
+    box.innerHTML+=`<div class="cart-savings">🎉 ¡Ahorro total en esta orden: $${totalSavings.toFixed(2)}!</div>`;
+  }
+}
+
+function updateUnits(){
+  document.querySelectorAll('input[id^="qty-"]').forEach(inp=>{
+    const u=inp.parentElement.querySelector('.unit'); if(!u) return;
+    const q=+inp.value||0;
+    u.textContent = u.dataset.u==='pza' ? (q===1?'Pza':'Pzas') : (q===1?'Millar':'Millares');
+  });
+}
+
+function calc(){
+  updateUnits();
+  let subtotal=0;
+  lastLines=[];
+  cartItems=[];
+
+  const qAzul=+document.getElementById('qty-azul').value||0;
+  const qCristal=+document.getElementById('qty-cristal').value||0;
+  const qCombinado=qAzul+qCristal;
+  const idx=qCombinado>0?garrafonTierIndex(qCombinado):-1;
+  const pAzul=idx>=0?azulPrices[idx]:0;
+  const pCristal=idx>=0?cristalPrices[idx]:0;
+
+  const comboMsg=document.getElementById('garrafon-combo-msg');
+  if(qAzul>0 && qCristal>0){
+    comboMsg.style.display='block';
+    comboMsg.textContent=`Precio por volumen combinado: ${qCombinado} piezas entre azul y cristal.`;
+  } else { comboMsg.style.display='none'; }
+
+  const tAzul=qAzul*pAzul;
+  document.getElementById('price-azul').textContent='$'+tAzul.toFixed(2);
+  const discAzul=qAzul>0?Math.round((1-pAzul/100)*1000)/10:0;
+  document.getElementById('disc-azul').textContent=(qAzul>0&&discAzul>0)?`-${discAzul}% vs 1 pza`:'';
+  if(qAzul>0){subtotal+=tAzul; lastLines.push(`Garrafón Azul x${qAzul} @ $${pAzul.toFixed(2)} = $${tAzul.toFixed(2)}${qCombinado>=200?' (PRECIO DISTRIBUIDOR)':''}`); cartItems.push({name:'Garrafón Azul',qty:qAzul,unit:'pza',unitPrice:pAzul,total:tAzul,tag:qCombinado>=200?'PRECIO DISTRIBUIDOR':'',savings:qAzul*(100-pAzul)});}
+
+  const tCristal=qCristal*pCristal;
+  document.getElementById('price-cristal').textContent='$'+tCristal.toFixed(2);
+  const discCristal=qCristal>0?Math.round((1-pCristal/100)*1000)/10:0;
+  document.getElementById('disc-cristal').textContent=(qCristal>0&&discCristal>0)?`-${discCristal}% vs 1 pza`:'';
+  if(qCristal>0){subtotal+=tCristal; lastLines.push(`Garrafón Cristal x${qCristal} @ $${pCristal.toFixed(2)} = $${tCristal.toFixed(2)}${qCombinado>=200?' (PRECIO DISTRIBUIDOR)':''}`); cartItems.push({name:'Garrafón Cristal',qty:qCristal,unit:'pza',unitPrice:pCristal,total:tCristal,tag:qCombinado>=200?'PRECIO DISTRIBUIDOR':'',savings:qCristal*(100-pCristal)});}
+
+  let tapaFamilyTotal=0;
+  tapaFamily.forEach(t=> tapaFamilyTotal+=+document.getElementById('qty-'+t.id).value||0);
+  const comboMayoreo = tapaFamilyTotal>=MAYOREO_MIN;
+  const msg=document.getElementById('tapa-combo-msg');
+  if(comboMayoreo){ msg.style.display='block'; msg.textContent=`Mayoreo aplicado a todas las tapas: suman ${tapaFamilyTotal} millares (≥30).`; }
+  else { msg.style.display='none'; }
+
+  tapaFamily.forEach(t=>{
+    const q=+document.getElementById('qty-'+t.id).value||0;
+    const may = comboMayoreo || q>=MAYOREO_MIN;
+    const price=may?t.mayoreo:t.normal;
+    const total=q*price;
+    document.getElementById('price-'+t.id).textContent='$'+total.toFixed(2);
+    const disc=Math.round((1-t.mayoreo/t.normal)*1000)/10;
+    document.getElementById('disc-'+t.id).textContent=(q>0&&may)?`Mayoreo (-${disc}%)`:'';
+    if(q>0){subtotal+=total; lastLines.push(`${t.name} x${q} millar @ $${price.toFixed(2)}${may?' (mayoreo)':''} = $${total.toFixed(2)}`); cartItems.push({name:t.name,qty:q,unit:'millar',unitPrice:price,total:total,tag:may?'mayoreo':'',savings:may?q*(t.normal-price):0});}
+  });
+
+  otros.forEach(t=>{
+    const q=+document.getElementById('qty-'+t.id).value||0;
+    const may = q>=MAYOREO_MIN;
+    const price=may?t.mayoreo:t.normal;
+    const total=q*price;
+    document.getElementById('price-'+t.id).textContent='$'+total.toFixed(2);
+    const disc=Math.round((1-t.mayoreo/t.normal)*1000)/10;
+    document.getElementById('disc-'+t.id).textContent=(q>0&&may)?`Mayoreo (-${disc}%)`:'';
+    if(q>0){subtotal+=total; lastLines.push(`${t.name} x${q} millar @ $${price.toFixed(2)}${may?' (mayoreo)':''} = $${total.toFixed(2)}`); cartItems.push({name:t.name,qty:q,unit:'millar',unitPrice:price,total:total,tag:may?'mayoreo':'',savings:may?q*(t.normal-price):0});}
+  });
+
+  let linerTotalQty=0;
+  linerFamily.forEach(t=> linerTotalQty+=+document.getElementById('qty-'+t.id).value||0);
+  const linerCombo = linerTotalQty>=MAYOREO_MIN;
+  const lmsg=document.getElementById('liner-combo-msg');
+  if(linerCombo){ lmsg.style.display='block'; lmsg.textContent=`Mayoreo aplicado a todos los liners: suman ${linerTotalQty} millares (≥30).`; }
+  else { lmsg.style.display='none'; }
+
+  linerFamily.forEach(t=>{
+    const q=+document.getElementById('qty-'+t.id).value||0;
+    const may = linerCombo || q>=MAYOREO_MIN;
+    const price=may?t.mayoreo:t.normal;
+    const total=q*price;
+    document.getElementById('price-'+t.id).textContent='$'+total.toFixed(2);
+    const disc=Math.round((1-t.mayoreo/t.normal)*1000)/10;
+    document.getElementById('disc-'+t.id).textContent=(q>0&&may)?`Mayoreo (-${disc}%)`:'';
+    if(q>0){subtotal+=total; lastLines.push(`${t.name} x${q} millar @ $${price.toFixed(2)}${may?' (mayoreo)':''} = $${total.toFixed(2)}`); cartItems.push({name:t.name,qty:q,unit:'millar',unitPrice:price,total:total,tag:may?'mayoreo':'',savings:may?q*(t.normal-price):0});}
+  });
+
+  renderCart();
+
+  const iva=subtotal*0.16;
+  const total=subtotal+iva;
+  document.getElementById('subtotal').textContent='$'+subtotal.toFixed(2);
+  document.getElementById('iva').textContent='$'+iva.toFixed(2);
+  document.getElementById('total').textContent='$'+total.toFixed(2);
+  document.getElementById('float-total').textContent='$'+total.toFixed(2);
+}
+
+function genOrden(){
+  calc();
+  const tel=document.getElementById('telefono').value.trim();
+  const correo=document.getElementById('correo').value.trim();
+  const acepta=document.getElementById('acepta-aviso').checked;
+  const errBox=document.getElementById('err-msg');
+  const errs=[];
+  if(!tel) errs.push('el teléfono');
+  if(!correo || !correo.includes('@')) errs.push('un correo electrónico válido');
+  if(!acepta) errs.push('la aceptación del Aviso de Privacidad');
+  if(errs.length){
+    errBox.style.display='block';
+    errBox.textContent='Falta: '+errs.join(', ')+'.';
+    errBox.scrollIntoView({behavior:'smooth',block:'center'});
+    return;
+  }
+  errBox.style.display='none';
+
+  const cliente=document.getElementById('cliente').value||'(sin especificar)';
+  const zonaSel=document.getElementById('zona');
+  const zonaText=zonaSel.options[zonaSel.selectedIndex].text;
+  const cp=document.getElementById('cp').value.trim()||'(sin especificar)';
+  const notas=document.getElementById('notas').value||'—';
+  const subtotal=document.getElementById('subtotal').textContent;
+  const iva=document.getElementById('iva').textContent;
+  const total=document.getElementById('total').textContent;
+  const fecha=new Date().toLocaleDateString('es-MX');
+
+  const productosResumen = cartItems.map(it=>`${it.name} x${it.qty}${it.unit==='pza'?' pza':' millar'}`).join('; ') || 'Sin productos';
+
+  let txt=`ORDEN — INSUMOS PURIFI-K\nFecha: ${fecha}\nCliente: ${cliente}\nTeléfono: ${tel}\nCorreo: ${correo}\nCódigo postal: ${cp}\nZona de entrega: ${zonaText}\n\nPRODUCTOS:\n`;
+  if(lastLines.length===0){ txt+='(sin productos seleccionados)\n'; } else { lastLines.forEach(l=>txt+='- '+l+'\n'); }
+  txt+=`\nSubtotal: ${subtotal}\nIVA (16%): ${iva}\nTOTAL: ${total}\n\nNotas: ${notas}\n\nWhatsApp: 222 116 9576 / 222 929 3883`;
+
+  const tsvRow=[fecha,cliente,tel,correo,cp,zonaText,productosResumen,subtotal,iva,total,notas].join('\t');
+  txt+=`\n\n📊 FILA PARA EXCEL (copia esta línea y pégala en tu hoja, se separa sola en columnas):\n${tsvRow}`;
+
+  const s=document.getElementById('summary');
+  s.style.display='block';
+  s.value=txt;
+  s.scrollIntoView({behavior:'smooth',block:'nearest'});
+
+  window.lastTsvRow=tsvRow;
+  const copyBtn=document.getElementById('copy-excel-btn');
+  if(copyBtn) copyBtn.style.display='block';
+
+  const waLink='https://wa.me/522229293883?text='+encodeURIComponent(txt);
+  window.open(waLink,'_blank');
+}
+
+function copyExcelRow(){
+  if(!window.lastTsvRow) return;
+  navigator.clipboard.writeText(window.lastTsvRow).then(()=>{
+    const btn=document.getElementById('copy-excel-btn');
+    const original=btn.textContent;
+    btn.textContent='✅ Copiado — pégalo en Excel';
+    setTimeout(()=>{ btn.textContent=original; }, 2200);
+  });
+}
+
+calc();
+
+document.querySelectorAll('input[id^="qty-"]').forEach(inp=>{
+  inp.addEventListener('focus', ()=>{ if(inp.value==='0') inp.value=''; });
+  inp.addEventListener('blur', ()=>{ if(inp.value.trim()==='') { inp.value='0'; calc(); } });
+});
+
+const rainbowNote=document.getElementById('rainbow-note');
+if(rainbowNote){
+  const rainbow=['#e63946','#f3722c','#f9c74f','#90be6d','#43aa8b','#277da1','#577590','#9b5de5','#f15bb5'];
+  const text=rainbowNote.textContent;
+  rainbowNote.setAttribute('aria-label', text);
+  rainbowNote.innerHTML=[...text].map((ch,i)=> ch===' ' ? ' ' : `<span style="color:${rainbow[i%rainbow.length]};font-weight:800;">${ch}</span>`).join('');
+}
+</script>
+</body>
+</html>
